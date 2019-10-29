@@ -12,7 +12,7 @@
 
 #### 界面预览图
 https://github.com/15127188821/pinkLightRecord/blob/master/img/index.png
-![首页](../blob/master/img/index.png)
+![首页](../master/img/index.png)
 
 ![照片预览页](/tree/master/img/detail.png)
 
