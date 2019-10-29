@@ -11,8 +11,8 @@
 - MySQL：用于存储各项数据
 
 #### 界面预览图
-
-![首页](/tree/master/img/index.png)
+https://github.com/15127188821/pinkLightRecord/blob/master/img/index.png
+![首页](../blob/master/img/index.png)
 
 ![照片预览页](/tree/master/img/detail.png)
 
