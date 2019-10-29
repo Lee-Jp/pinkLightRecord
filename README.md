@@ -12,9 +12,9 @@
 
 #### 界面预览图
 
-![首页](/img/index.png)
+![首页](/tree/master/img/index.png)
 
-![照片预览页](img/detail.png)
+![照片预览页](/tree/master/img/detail.png)
 
 #### 安装流程：
 
