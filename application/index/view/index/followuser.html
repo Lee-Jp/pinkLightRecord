@@ -1,0 +1,175 @@
+<style>
+    .total {
+        color: #666;
+        font-size: 14px;
+        margin: 20px 74px;
+        text-indent: 2px;
+
+    }
+
+    .gz_box {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .gz_per {
+        width: 322px;
+        height: 188px;
+        margin: 10px;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    .bgc {
+        width: 322px;
+        height: 108px;
+
+    }
+
+    .gz_detail {
+        width: 65%;
+        display: flex;
+        margin-left: 95px;
+        margin-top: 16px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .gz_detail span:nth-of-type(1) {
+        color: #000;
+        font-size: 14px;
+    }
+
+    .gz_detail span:nth-of-type(2) {
+        font-size: 14px;
+        color: #ca9b04;
+        border: 1px solid #ca9b04;
+        padding: 2px 20px;
+
+    }
+
+    .message {
+        margin-left: 20px;
+        font-size: 14px;
+        color: #86898b;
+        margin-top: 20px;
+
+    }
+
+    .tal {
+        color: #ca9b04;
+        font-size: 14px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .tou {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        position: absolute;
+        top: 85px;
+        left: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+    <!--用户封面-->
+    <div class="personal-integer" style="background-image: url(__STATIC__/index/img/personal-back/h_u_0.jpg);">
+        <div class="container-fluid">
+            <div class="personal-banner">
+                <div class="personal-banner-info" id="personalInfo">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--第二导航栏-->
+    <div class="secondaryNav">
+        <ul class="nav-list">
+            <li><span style="text-align: center;" id="totalname"></span>关注了<span id="totalnamber"></span>人</li>
+        </ul>
+    </div>
+    <!-- 关注列表 -->
+    <div class="total">
+
+    </div>
+    <div class="gz_box" id="list_container">
+
+    </div>
+</body>
+
+</html>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function () {
+        var user = JSON.parse(localStorage.getItem('user'));
+        var personalInfo = `<a href="" class="personal-logo"><img src="${httppic}${user.avatarSrc}" /></a>
+                    <div class="personal-info">
+                        <div class="title">
+                            <span class="info-name">${user.username}</span>
+                        </div>
+                        <ul class="slash-list">
+                            <li class="slash-item">河北-石家庄</li>
+                            <li class="slash-item"><a href="">关注4</a></li>
+                            <li class="slash-item"><a href="">粉丝11</a></li>
+                        </ul>
+                        <div class="personal-intro">
+                            <p>他注定是一个低调的大侠，所以他什么也没写</p>
+                        </div>
+                    </div>`;
+        $('#personalInfo').html(personalInfo);
+        $('#totalname').html(user.username);
+        getfollow();
+    });
+    function getfollow() {
+        //获取关注的人
+        var user = JSON.parse(localStorage.getItem('user'));
+        $.ajax({
+            url: httpurl + 'user/ajaxGetFollowUser',
+            type: 'post',
+            data: {
+                'user_id': user.uid
+            },
+            success(res) {
+                if (res.code == 200) {
+                    console.log(res);
+                    var str = "";
+                    var data = res.data;
+                    $.each(data, function (i, v) {
+                        str += `<div class="gz_per">
+                                <img class="bgc" src="__STATIC__/index/img/personal-back/h_u_0.jpg" alt="" srcset="">
+                                <div class="gz_detail">
+                                    <span style="width:80px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;">${v.username}</span>
+                                    <span style="cursor: pointer;" onclick="qxfollow(${v.friend_id})">取消关注</span>
+                                </div>
+                                <img class="tou" src="${httppic}${v.avatarSrc}" alt="" srcset="">
+                            </div>`;
+                        $('#list_container').html(str);
+                        $('#totalnamber').html(res.data.length);
+                    });
+                } else {
+                    $('#list_container').html('您还没有关注用户');
+                }
+            }
+        });
+    }
+    function qxfollow(friend_id) {
+        // 取消关注
+        var user = JSON.parse(localStorage.getItem('user'));
+        $.ajax({
+            url: httpurl + 'user/ajaxDelFollowUser',
+            type: 'post',
+            data: {
+                'user_id': user.uid,
+                'friend_id': friend_id
+            }
+        });
+        window.location.reload();
+    }
+</script>

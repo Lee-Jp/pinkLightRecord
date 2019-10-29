@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="__STATIC__/index/css/bootstrap.css">
+
+<style>
+    .active {
+    background-color: #5ccfe6;
+}
+.bgc{
+    width: 100%;
+    background-color: #101e2b;
+}
+.photolist{
+    width: 100%;
+
+    margin: 0 auto;
+    /* background-color: rebeccapurple; */
+    padding-left: 100px;
+}
+.photolist button{
+    margin-top: 25px;
+    padding: 10px 20px;
+}
+.big-box{
+    margin-top: 40px;
+   width:100%;
+   display: flex;
+   flex-flow: row wrap;
+
+}
+
+.photo-box{
+    width: 228px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 12px;
+    align-items: center;
+}
+.pic{
+    width: 228px;
+    height: 200px;
+    margin: 0 auto;
+}
+.photoname{
+    color: #293233;
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+   margin: 0 auto;
+    justify-content: center;
+}
+</style>
+<!--用户封面-->
+<div class="personal-integer" style="background-image: url(__STATIC__/index/img/personal-back/h_u_0.jpg);">
+    <div class="container-fluid">
+        <div class="personal-banner">
+            <div class="personal-banner-info" id="personalInfo">
+
+            </div>
+            <div class="person-act">编辑封面></div>
+        </div>
+    </div>
+</div>
+    <!--第二导航栏-->
+    <div class="secondaryNav">
+        <ul class="nav-list">
+            <li><a href="{:url('index/user_index')}">我的图文</a></li>
+            <li class="active"><a style="color: #fff;" href="{:url('index/member_photo')}">我的相册</a></li>
+            <li><a href="{:url('index/user_like')}">我的喜欢</a></li>
+        </ul>
+    </div>
+    <!-- 相册列表 -->
+    <div class="bgc">
+        <div class="photolist" >
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                <a href="{:url('index/member_uploadphotocont')}" class="fontwihte"><img style="width:28px; height:28px;" src="__STATIC__/index/image/jia.png" >上传照片</a>
+            </button>
+                <div class="big-box" id="myphoto">
+
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function() {
+        var albumid = JSON.parse(localStorage.getItem("albumid"));
+        var user = JSON.parse(localStorage.getItem('user'));
+        var personalInfo = `<a href="" class="personal-logo"><img src="${httppic}${user.avatarSrc}" /></a>
+                    <div class="personal-info">
+                        <div class="title">
+                            <span class="info-name">${user.username}</span>
+                        </div>
+                        <ul class="slash-list">
+                            <li class="slash-item">四川-成都</li>
+                            <li class="slash-item"><a href="">关注4</a></li>
+                            <li class="slash-item"><a href="">粉丝11</a></li>
+                        </ul>
+                        <div class="personal-intro">
+                            <p>他注定是一个低调的大侠，所以他什么也没写</p>
+                        </div>
+                    </div>`;
+        $('#personalInfo').html(personalInfo);
+        //获取自己的相册图片
+        $.ajax({
+            url: httpurl + 'myphoto/ajaxGetMyPhotoCont',
+            type: 'post',
+            data: {
+                'album_id':albumid
+            },
+            success(res) {
+                console.log(res);
+                var str = "";
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    str += `
+                        <div class="photo-box" style="cursor: pointer;" onclick="myphotoyulan(${v.id})">
+                        <img class="pic" src="${httppic}${v.path}" alt="" srcset="">
+                        <div class="photoname">
+                        <span>${v.name}</span>
+                        </div>
+                        </div> `;
+                });
+                $('#myphoto').html(str);
+            }
+        });
+    });
+    //预览照片
+    function myphotoyulan(id){
+        localStorage.myphotoid =  JSON.stringify(id);
+        window.location.href="{:url('index/myphotoyulan')}";
+    }
+</script>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+<!--*貌似  废弃了-->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>拾光纪</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/css/boorstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/index/css/style.css" />
+    <style>
+        .active {
+            background-color: #5ccfe6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- 首导航栏 -->
+            <div class="nav-wide">
+                <div class="nav-left fl">
+                    <div class="nav-logo fl"><img src="__STATIC__/index/img/logo/logo_icon_white.png" class="" alt="摄趣"></div>
+                    <ul class="nav-page fl">
+                        <li>
+                            <router-link to="/MainBanner">首页</router-link>
+                        </li>
+                        <li><a href="">关注</a></li>
+                        <li><a href="index.html">发现</a></li>
+                        <li><a href="">消息</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="nav-right fr">
+                    <ul class="user-list">
+                        <li class="user-info" @mouseenter="infoHandleEnter(true)" @mouseleave="infoHandleEnter(false)">
+                            <a href=""><img src="img/avatar/head.jpg" class="user-avatar" alt=""> <span
+                                    class="user-name">桔梗8888888888888</span></a>
+                        </li>
+                        <li class="user-message" @mouseenter="messageHandleEnter(true)"
+                            @mouseleave="messageHandleEnter(false)">
+                            <a href=""><span class="fa fa-envelope"></span></a>
+                        </li>
+                        <li class="user-publish" @mouseenter="publishHandleEnter(true)"
+                            @mouseleave="publishHandleEnter(false)">
+                            <a href="new_photo.html">发布</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!--用户封面-->
+    <div class="personal-integer" style="background-image: url(__STATIC__/index/img/personal-back/h_u_0.jpg);">
+        <div class="container-fluid">
+            <div class="personal-banner">
+                <div class="personal-banner-info">
+                    <a href="" class="personal-logo"><img src="__STATIC__/index/img/avatar/head.jpg" /></a>
+                    <div class="personal-info">
+                        <div class="title">
+                            <span class="info-name">桔梗88888888880</span>
+                        </div>
+                        <ul class="slash-list">
+                            <li class="slash-item">四川-成都</li>
+                            <li class="slash-item"><a href="">关注4</a></li>
+                            <li class="slash-item"><a href="">粉丝11</a></li>
+                        </ul>
+                        <div class="personal-intro">
+                            <p>他注定是一个低调的大侠，所以他什么也没写</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="person-act">编辑封面></div>
+            </div>
+        </div>
+    </div>
+    <!--第二导航栏-->
+    <div class="secondaryNav">
+        <ul class="nav-list">
+            <li><a href="">我的图文</a></li>
+            <li class="active"><a style="color: #fff;" href="">我的相册</a></li>
+            <li><a href="">我的喜欢</a></li>
+            <li><a href="">收藏夹</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <form action="{:url('index/create_myphoto')}" method="post" enctype="multipart/form-data">
+            <!--隐藏的用户id-->
+            <div id="user_id"></div>
+             <div class="form-inline">
+                 <div class="col-sm-1">上传封面</div>
+                 <div class="col-sm-6"><input type="file" class="form-control w-100" id="" name="path"/></div>
+             </div>
+             <div class="form-inline mt-3">
+                 <div class="col-sm-1">相册名称</div>
+                 <div class="col-sm-6"><input type="text" class="form-control w-100" id="" name="name"/></div>
+             </div>
+            <div class="form-inline mt-5">
+                 <div class="col-sm-1">相册简介</div>
+                 <div class="col-sm-6"><textarea name="intro" rows="" cols="15" class="form-control w-100" ></textarea></div>
+             </div>
+            <div class="form-inline mt-5">
+                 <div class="col-sm-1 ">是否公开</div>
+                 <div class="col-sm-6">
+                    <select class="form-control w-100" name="status"  id="">
+                        <option value="公开">公开</option>
+                        <option value="私密" >私密</option>
+                    </select>
+                </div>
+             </div>
+             <div class="form-inline mt-3">
+                 <div class="offset-sm-2">
+                     <input type="submit" value="创建" class="btn newBtn"/>
+                 </div>
+             </div>
+         </form>
+    </div>
+</body>
+</html>
+<script src='__STATIC__/index/js/jquery.min.js' type="text/javascript"></script>
+<script>
+    $(function(){
+        // 获取用户信息放到表单中
+        var user = JSON.parse(localStorage.getItem('user'));
+        var userlogined = `<input type="hidden" value="${user.uid}" name="user_id">`;
+        $('#user_id').html(userlogined);
+    });
+</script>

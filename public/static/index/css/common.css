@@ -1,0 +1,68 @@
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+
+/* 头导航 */
+/* index-nav-wide */
+header{
+    font: white;
+}
+.nav-logo{
+	line-height: 60px;
+}
+.user-avatar{
+	border-radius: 50%;
+}
+header img{
+    height: 40px;
+}
+header .container {
+    width: 100%;
+    min-width: 800px;
+    max-width: 1880px;
+    height: 60px;
+    padding: 0 40px;
+    margin: 0 auto;
+    background-color:black; 
+}
+ .nav-wide li{
+	float: left;
+	line-height: 60px;
+	height: 40px;
+	text-align: center;
+}
+.nav-wide li a{
+	font-size: 15px;
+    color: #FFFFFF;
+}
+.nav-left li{
+	width: 80px;
+}
+.nav-left li a:hover{
+	color:#f3a28b;
+}
+.user-publish>a{
+	padding: 5px 30px;
+	color: #ac7b1c;
+	border:1px solid #ac7b1c ;
+}
+.nav-right li a:hover{
+	color: #ac7b1c;
+}
+.subnav-list li{
+    float: none;
+	background-color: #242322;
+	min-width: 100px;
+}
+.subnav-list{
+	border-bottom: 2px solid #f3a28b;
+	padding-bottom: 10px;
+	background-color: #242322;
+}

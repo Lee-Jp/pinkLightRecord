@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+{__NOLAYOUT__}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .box {
+        background-color: #000;
+        width: 100%;
+        height: 1200px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .left {
+        width: 65%;
+    }
+    .box-left {
+        margin-top: 10px;
+        margin-left: 40px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .box-left-bottom {
+        margin-left: 40px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left img {
+        line-height: 48px;
+        width: 26px;
+        height: 26px;
+    }
+    .num {
+        color: #7a7a7a;
+    }
+    .box-right-left span {
+        color: #fff;
+        margin-left: 4px;
+    }
+    #mainpic img {
+        line-height: 48px;
+        width: 700px;
+        height: 466px;
+    }
+    .right {
+        width: 34%;
+        border-left: 1px solid #1c1d1e;
+    }
+    .box-right {
+        width: 100%;
+        margin-top: 10px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #1c1d1e;
+    }
+    .box-right div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 15px;
+    }
+    .box-right-bottombox{
+        height: 90px;
+        border-bottom: 1px solid #1c1d1e;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content:space-between;
+        padding-left: 25px;
+    }
+    .bottombox-leftbox-left img{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+    .bottombox-leftbox{
+        display: flex;
+        justify-content:flex-start;
+    }
+    .bottom-right-top span{
+        color: #fff;
+    }
+    .bottombox-leftbox-right{
+        margin-left: 15px;
+        margin-top: 6px;
+        width: 60%;
+        height: 44px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .bottom-right-bottom{
+        color: #7f7f7f;
+        display: flex;
+        margin-top: 6px;
+    }
+
+    .bottom-right-bottom div{
+        margin-left: 10px;
+    }
+    .bottombox-rightbox span{
+       margin-right:20px;
+       color: #c99a05;
+       border: 1px solid #c99a05;
+       padding: 5px 30px;
+    }
+    .detail{
+        color: #fff;
+        height: 50px;
+        display: flex;
+        flex-flow: row wrap;
+        padding-left: 35px;
+        padding-top:20px ;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #1c1d1e;
+    }
+    .detail span{
+        width: 100%;
+    }
+    .detail span:nth-of-type(2){
+        font-size: 12px;
+    }
+    .talking textarea{
+        background: #1c1d1e;
+        color: #575757;
+        font-size: 16px;
+        margin: 30px 50px;
+        padding: 10px 20px;
+    }
+    .comment{
+    color: #c99a05;
+    margin-left:420px;
+    }
+
+    .ask-title img{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+    }
+
+    .riqi div{
+        color: #878b8d;
+        font-size: 14px; 
+    }
+</style>
+<body>
+    <!-- 头部 -->
+    <div class="box">
+        <div class="left">
+            <div class="box-left">
+                <img src="__STATIC__/index/image/big.png" alt="" srcset="">
+                <span class="num">3/6</span>
+                <img onclick="closethis()" style="cursor: pointer;" src="__STATIC__/index/image/close.png" alt="" srcset="">
+            </div>
+            <!-- 图片显示 -->
+            <div class="box-left-bottom">
+                <img src="__STATIC__/index/image/left.png" style="cursor: pointer;" onclick="prevphoto()">
+                <div id="mainpic">
+
+                </div>
+                <img src="__STATIC__/index/image/right.png" style="cursor: pointer;" onclick="nextphoto()">
+            </div>
+        </div>
+        <div class="right">
+            <div class="box-right">
+                <!-- 右边头部 -->
+                <div class="box-right-left">
+                    <div>
+                        <img src="__STATIC__/index/image/like.png" onclick="lickthis()" style="cursor: pointer;" alt="" srcset="">
+                        <span id="score"></span>
+                    </div>
+                    <div>
+                        <img src="__STATIC__/index/image/news.png" alt="" srcset="">
+                        <span>11</span>
+                    </div>
+                    <div id="detale">
+
+                    </div>
+                </div>
+            </div>
+                <!-- 右边主页信息部分 -->
+                <div class="box-right-bottombox">
+                    <div class="bottombox-leftbox">
+                        <div class="bottombox-leftbox-left" id="avatarSrc">
+                        </div>
+                        <div class="bottombox-leftbox-right">
+                            <div class="bottom-right-top">
+                                    <span id="uploadname"></span>
+                            </div>
+                            <div class="bottom-right-bottom">
+                                    <div id="create_time"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="follow">
+
+                    </div>
+            </div>
+            <!-- 详情信息部分 -->
+            <div class="detail" id="detail">
+
+            </div>
+            <!-- 评论部分 -->
+            <div class="talking">
+                <textarea name="" id="content" cols="44" rows="5" placeholder="别拦我，我想认真和你探讨一下..."></textarea>
+                <span class="comment" onclick="setComment()" style="cursor: pointer;">评论</span>
+                <div id="commentlist">
+
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function() {
+        var myphotoid = JSON.parse(localStorage.getItem("myphotoid"));
+        //获取预览大图
+        $.ajax({
+            url: httpurl + 'myphoto/ajaxYulan',
+            type: 'post',
+            data: {
+                'id':myphotoid
+            },
+            success(res) {
+                console.log(res);
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    var mainpic = `<img src="${httppic}${v.path}"  alt="">`;
+                    var detail = ` <span>${v.name}</span><span>#${v.intro}</span>`;
+                    var detale = ` <span onclick="datalethis(${v.id})" style="cursor: pointer;" >删除</span>`;
+                    $('#mainpic').html(mainpic);    //图片
+                    $('#uploadname').html(v.username);  //作者昵称
+                    $('#create_time').html(v.creat_time);  //上传时间
+                    $('#detail').html(detail);  //作品信息
+                    $('#detale').html(detale);  //作品信息
+
+                });
+            }
+        });
+    });
+    //下一页
+    function nextphoto(){
+        var myphotoid = JSON.parse(localStorage.getItem("myphotoid"));
+        //获取预览大图
+        $.ajax({
+            url: httpurl + 'myphoto/ajaxYulan',
+            type: 'post',
+            data: {
+                'id':myphotoid + 1
+            },
+            success(res) {
+                console.log(res);
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    var mainpic = `<img src="${httppic}${v.path}"  alt="">`;
+                    var detail = ` <span>${v.name}</span><span>#${v.intro}</span>`;
+                    var detale = ` <span onclick="datalethis(${v.id})" style="cursor: pointer;" >删除</span>`;
+                    $('#mainpic').html(mainpic);    //图片
+                    $('#uploadname').html(v.username);  //作者昵称
+                    $('#create_time').html(v.creat_time);  //上传时间
+                    $('#detail').html(detail);  //作品信息
+                    $('#detale').html(detale);  //作品信息
+                });
+            }
+        });
+        localStorage.comphotoid =  JSON.stringify(myphotoid+1);
+    }
+    //上一页
+    function prevphoto(){
+        var myphotoid = JSON.parse(localStorage.getItem("myphotoid"));
+        //获取预览大图
+        $.ajax({
+            url: httpurl + 'myphoto/ajaxYulan',
+            type: 'post',
+            data: {
+                'id':myphotoid - 1
+            },
+            success(res) {
+                console.log(res);
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    var mainpic = `<img src="${httppic}${v.path}"  alt="">`;
+                    var detail = ` <span>${v.name}</span><span>#${v.intro}</span>`;
+                    var detale = ` <span onclick="datalethis(${v.id})" style="cursor: pointer;" >删除</span>`;
+                    $('#mainpic').html(mainpic);    //图片
+                    $('#uploadname').html(v.username);  //作者昵称
+                    $('#create_time').html(v.creat_time);  //上传时间
+                    $('#detail').html(detail);  //作品信息
+                    $('#detale').html(detale);  //作品信息
+                });
+            }
+        });
+        localStorage.comphotoid =  JSON.stringify(myphotoid-1);
+    }
+    function datalethis(id){
+        //删除相册图片
+        var r=confirm("您确定要删除么？");
+        if (r==true){
+            $.ajax({
+                url: httpurl + 'myphoto/dataleMyPhotoCont',
+                type: 'post',
+                data: {
+                    'id':id
+                },
+                success() {
+                    closethis();
+                }
+            });
+        }else{
+            return false;
+        }
+    }
+    //关闭此页面，返回上一级
+    function closethis(){
+        window.location.href="{:url('index/member_uploadphoto')}";
+    }
+</script>

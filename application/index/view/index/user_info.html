@@ -1,0 +1,95 @@
+<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/bootstrap.css"/>
+<script type="text/javascript" src="__STATIC__/index/js/jquery.min.js"></script>
+		<script type="text/javascript" src="__STATIC__/index/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="__STATIC__/webuploader/webuploader.css">
+	<!--第二导航栏-->
+	<div class="secondaryNav ">
+        <ul class="nav-list">
+            <li><a href="user_info.html" class="collapse">我的资料</a></li>
+
+        </ul>
+   </div>
+   <div class="container">
+	   <form action="{:url('index/updataUserInfo')}" method="post" enctype="multipart/form-data">
+           <!--隐藏的用户id-->
+           <div id="user_id"></div>
+            <div class="form-inline">
+                <div class="col-sm-1">头像</div>
+                    <div class="col-sm-6">
+                   <div id="picker" >选择文件</div>
+                   <!--隐藏的图片路径-->
+                   <div id="upcachephoto"></div>
+                   <!--图片预览-->
+                   <img src="" id="avatar" style="width: 200px;">
+               </div>
+            </div>
+            <div class="form-inline mt-2">
+                <div class="col-sm-1">性别</div>
+                <div class="col-sm-6">
+			   <select class="form-control w-100" name="sex" >
+				   <option value="男">男</option>
+				   <option value="女" >女</option>
+			   </select>
+		   </div>
+            </div>
+			<div class="form-inline mt-3">
+	                <div class="col-sm-1">生日</div>
+	                <div class="col-sm-6"><input type="date" class="form-control w-100" id="" name="birthday"/></div>
+	            </div>
+			<div class="form-inline mt-3">
+	                <div class="col-sm-1">城市</div>
+	                <div class="col-sm-6"><input type="text" class="form-control w-100" id="" name="city"/></div>
+	            </div>
+			 <div class="form-inline mt-3">
+	                <div class="col-sm-1">个人简介</div>
+	                <div class="col-sm-6"><textarea name="intro" rows="" cols="15" class="form-control w-100" ></textarea></div>
+	            </div>
+            <div class="form-inline mt-3">
+                <div class="offset-sm-2">
+                    <input type="submit" value="修改" class="btn newBtn"/>
+                </div>
+            </div>
+        </form>
+	</div>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script type="text/javascript" src="__STATIC__/webuploader/webuploader.js"></script>
+<script>
+    $(function(){
+        // 获取用户信息放到表单中
+        var user = JSON.parse(localStorage.getItem('user'));
+            var userlogined = `<input type="hidden" value="${user.uid}" name="user_id">`;
+            $('#user_id').html(userlogined);
+    });
+    var uploader = WebUploader.create({
+        auto: true,
+        // swf文件路径
+        swf: '__STATIC__/webuploader/js/Uploader.swf',
+        // 文件接收服务端。
+        server: '{:url("upcache/uploadcache")}',
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#picker',
+        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+        resize: false,
+        // 设置文件上传域的name
+        fileVal: 'path',
+        // 只允许选择图片文件。
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+    // 回调事件
+    uploader.on('uploadSuccess', function ($file, response) {
+        var upcachehttp = httppic + response.msg;
+        if (response.status == 0) {
+            $('#avatar').attr('src',upcachehttp).show('slow');
+            //把预览图片放到隐藏表单中
+            var upcachephoto = `<input type="hidden" value="${response.msg}" name="avatarSrc">`;
+            console.log(upcachephoto);
+            $('#upcachephoto').html(upcachephoto);
+        }
+    });
+</script>

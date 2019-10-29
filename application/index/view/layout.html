@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拾光纪  -  社区</title>
+    <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/style.css">
+</head>
+<style>
+
+</style>
+<body>
+<!--导航栏-->
+<header>
+    <div class="container">
+        <!-- 首导航栏 -->
+        <div class="nav-wide">
+            <div class="nav-left fl">
+                <div class="nav-logo fl"><img src="__STATIC__/index/img/logo/logo.png" class="" alt="摄趣"></div>
+                <ul class="nav-page fl">
+                    <li><a href="{:url('index/index')}">首页</a></li>
+                    <li><a href="{:url('index/followuser')}">关注</a></li>
+                    <!--<li><a href="">发现</a></li>-->
+                    <li><a href="{:url('index/msg_comment')}">消息</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="nav-right fr">
+                <ul class="user-list">
+                    <!--头像昵称-->
+                    <li class="user-info"  id="userinfo">
+                    </li>
+                    <li class="user-message">
+                        <a href="{:url('index/msg_comment')}"><span class="fa fa-envelope"></span></a>
+                    </li>
+                    <li class="user-publish">
+                        <a href="javascript:;" onclick="upImage()">发布</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</header>
+{__CONTENT__}
+</body>
+</html>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function(){
+        // $('#imgzz').hide();
+        // 获取用户头像用户名
+        var user = JSON.parse(localStorage.getItem('user'));
+        if(user==undefined){
+            $('#userinfo').html("<a href=\"{:url('index/login')}\">登录</a>");
+        }else{
+            var userlogined = `<a href="">
+                                <img src="${httppic}${user.avatarSrc}" class="user-avatar" alt="">
+                                <span class="user-name">${user.username}</span>
+                            </a>
+                            <a href="{:url('index/user_info')}" >&nbsp 修改信息</a>
+                            <a href="{:url('index/user_index')}" >&nbsp 我的空间</a>
+                            <a href="javascript:;" onclick ="logout()">&nbsp 退出登录</a>`;
+            $('#userinfo').html(userlogined);
+        }
+    });
+
+    //没有登录禁止上传图片
+    function upImage(){
+        var user = JSON.parse(localStorage.getItem('user'));
+        if(user==undefined){
+            alert('您还没有登录，请先登录再进行上传~');
+            window.location.href="{:url('index/login')}";
+        }else{
+            window.location.href="{:url('index/new_photo')}";
+        }
+    }
+    //退出登录
+    function logout(){
+        localStorage.clear();
+        location.reload();
+    }
+</script>

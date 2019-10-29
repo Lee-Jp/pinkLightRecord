@@ -1,0 +1,106 @@
+<style>
+    .active {
+        background-color: #5ccfe6;
+    }
+
+    * body {
+        background-color: #edeff0;
+    }
+
+    .pic .dapic {
+        height: 250px;
+        width: 250px;
+        left: 50%;
+        position: relative;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+    }
+</style>
+<!--用户封面-->
+<div class="personal-integer" style="background-image: url(__STATIC__/index/img/personal-back/h_u_0.jpg);">
+    <div class="container-fluid">
+        <div class="personal-banner">
+            <div class="personal-banner-info" id="personalInfo">
+
+            </div>
+            <div class="person-act">编辑封面></div>
+        </div>
+    </div>
+</div>
+<!--第二导航栏-->
+<div class="secondaryNav">
+    <ul class="nav-list">
+        <li><a href="{:url('index/user_index')}">我的图文</a></li>
+        <li><a href="{:url('index/member_photo')}">我的相册</a></li>
+        <li class="active"><a style="color: #fff;" href="{:url('index/user_like')}">我的喜欢</a></li>
+    </ul>
+</div>
+<!--图片-->
+<div class="container pic" id="compic">
+
+</div>
+</body>
+
+</html>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function () {
+        var user = JSON.parse(localStorage.getItem('user'));
+        var personalInfo = `<a href="" class="personal-logo"><img src="${httppic}${user.avatarSrc}" /></a>
+                    <div class="personal-info">
+                        <div class="title">
+                            <span class="info-name">${user.username}</span>
+                        </div>
+                        <ul class="slash-list">
+                            <li class="slash-item">河北-石家庄</li>
+                            <li class="slash-item"><a href="">关注4</a></li>
+                            <li class="slash-item"><a href="">粉丝11</a></li>
+                        </ul>
+                        <div class="personal-intro">
+                            <p>他注定是一个低调的大侠，所以他什么也没写</p>
+                        </div>
+                    </div>`;
+        $('#personalInfo').html(personalInfo);
+        //获取个人中心所有图片
+        $.ajax({
+            url: httpurl + 'user/ajaxGetMyLike',
+            type: 'post',
+            data: {
+                'user_id': user.uid
+            },
+            success(res) {
+                console.log(res);
+                
+                var str = "";
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    str += `<div class="col-xs-6 col-md-3" onclick="comyulan(${v.id})">
+                            <a href="#" class="thumbnail">
+                                <img src="${httppic}${v.path}"alt="..." class="dapic">
+                                <ul class="list-group">
+                                    <li class="list-group-item" style=" width:100%;display:flex; alien-item:center; justify-content:space-between">
+                                       <div>
+                                        <img src="${httppic}${v.avatarSrc}" style="width: 26px;height: 26px;border-radius: 50%;" alt="...">
+                                        ${v.username}
+                                    </div>
+                                    <div>
+                                        <span class="badge" style="line-height:20px;">评${v.score}</span>
+                                        <span class="badge" style="line-height:20px;">赞${v.score}</span>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>`;
+                });
+                $('#compic').html(str);
+            }
+        });
+    });
+    //预览照片
+    function comyulan(id) {
+        localStorage.comphotoid = JSON.stringify(id);
+        window.location.href = "{:url('index/user_likeyulan')}";
+    }
+</script>

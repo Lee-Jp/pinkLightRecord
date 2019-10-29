@@ -1,0 +1,369 @@
+---------------------------------------------------------------
+[ 2019-10-28T16:34:14+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/
+[运行时间：0.390262s] [吞吐率：2.56req/s] [内存消耗：1,472.83kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'sec-fetch-site' => 'none',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:14+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/ajaxGetComphoto
+[运行时间：0.239170s] [吞吐率：4.18req/s] [内存消耗：1,952.26kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'ajaxGetComphoto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->ajaxGetComphoto[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015382s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.101377s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comphoto` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `check` = '审核通过' ORDER BY `id` DESC [ RunTime:0.021708s ]
+---------------------------------------------------------------
+[ 2019-10-28T16:34:36+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/
+[运行时间：0.030514s] [吞吐率：32.77req/s] [内存消耗：1,472.94kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:37+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/ajaxGetComphoto
+[运行时间：0.073743s] [吞吐率：13.56req/s] [内存消耗：1,952.26kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'ajaxGetComphoto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->ajaxGetComphoto[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011376s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.013990s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comphoto` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `check` = '审核通过' ORDER BY `id` DESC [ RunTime:0.001007s ]
+---------------------------------------------------------------
+[ 2019-10-28T16:34:40+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/user_info.html
+[运行时间：0.076936s] [吞吐率：13.00req/s] [内存消耗：1,587.29kb] [文件加载：51]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user_info[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\user_info.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:42+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/user_info.html
+[运行时间：0.029081s] [吞吐率：34.39req/s] [内存消耗：1,462.98kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/user_info.html',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user_info[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\user_info.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:43+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/login.html
+[运行时间：0.028127s] [吞吐率：35.55req/s] [内存消耗：1,540.72kb] [文件加载：50]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/user_info.html',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:46+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/register.html
+[运行时间：0.085229s] [吞吐率：11.73req/s] [内存消耗：1,540.77kb] [文件加载：50]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/login.html',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->register[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:48+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/login.html
+[运行时间：0.033934s] [吞吐率：29.47req/s] [内存消耗：1,416.05kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/register.html',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:49+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/register.html
+[运行时间：0.037799s] [吞吐率：26.46req/s] [内存消耗：1,416.10kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/login.html',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->register[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-28T16:34:50+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/login.html
+[运行时间：0.033548s] [吞吐率：29.81req/s] [内存消耗：1,416.05kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1711332352; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/register.html',
+  'sec-fetch-site' => 'same-origin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-mode' => 'navigate',
+  'user-agent' => 'Opera/9.80 (Windows NT 6.0) Presto/2.12.388 Version/12.14',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

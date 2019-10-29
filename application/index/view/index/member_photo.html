@@ -1,0 +1,280 @@
+<link rel="stylesheet" href="__STATIC__/index/css/bootstrap.css">
+<style>
+    .active {
+        background-color: #5ccfe6;
+    }
+
+    .bgc {
+        width: 100%;
+
+        background-color: #080823;
+    }
+
+    .photolist {
+        width: 100%;
+        margin: 0 auto;
+        padding-left:58px;
+        background: #080823;
+    }
+
+    .photolist button {
+        margin-top: 25px;
+        padding: 10px 20px;
+    }
+
+    .big-box {
+        margin-top: 10px;
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .photo-box {
+        width: 228px;
+        height: 260px;
+        background-color: #fff;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 20px 10px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .pic {
+        padding-top: 10px;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .photoname {
+        color: #293233;
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .create-btn {
+        margin: 10px;
+        text-align: center;
+    }
+    .add-box{
+        background-color: rgba(255, 255, 255,0.15)
+    }
+
+   .add-box img{
+    display: block;
+    margin:  auto;
+    width: 50%;
+   }
+   
+</style>
+
+<!--用户封面-->
+<div class="personal-integer" style="background-image: url(__STATIC__/index/img/personal-back/h_u_0.jpg);">
+    <div class="container-fluid">
+        <div class="personal-banner">
+            <div class="personal-banner-info" id="personalInfo">
+
+            </div>
+            <!-- <div class="person-act">编辑封面></div> -->
+        </div>
+    </div>
+</div>
+<!--第二导航栏-->
+<div class="secondaryNav">
+    <ul class="nav-list">
+        <li><a href="{:url('index/user_index')}">我的图文</a></li>
+        <li class="active"><a style="color: #fff;" href="{:url('index/member_photo')}">我的相册</a></li>
+        <li><a href="{:url('index/user_like')}">我的喜欢</a></li>
+    </ul>
+</div>
+
+
+<!-- 相册列表 -->
+<div class="bgc">
+    <div class="photolist">
+     
+        <!-- 相册列表 -->
+        <div class="big-box" id="myalbum">
+
+        </div>
+        
+           <!-- 按钮触发模态框 -->
+
+<!--            
+           <div class="create-btn">
+                <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">创建相册</button>
+            </div> -->
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">上传照片</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="{:url('index/create_myphoto')}" method="post" enctype="multipart/form-data">
+                    <!--隐藏的用户id-->
+                    <div id="user_id"></div>
+                             <div class="form-inline">
+                                     <div class="">上传封面</div>
+                                     <div class=""><input type="file" class="form-control w-100" id="" name="path" />
+                        </div>
+                                 </div>
+                             <div class="form-inline mt-3">
+                                     <div class="">相册名称</div>
+                                     <div class=""><input type="text" class="form-control w-100" id="" name="name" />
+                        </div>
+                                 </div>
+                    <div class="form-inline mt-5">
+                                     <div class="">相册简介</div>
+                                     <div class=""><textarea name="intro" rows="" cols="15"
+                                class="form-control w-100"></textarea></div>
+                                 </div>
+                    <div class="form-inline mt-5">
+                                     <div class="">是否公开</div>
+                                     <div class="">
+                            <select class="form-control w-100" name="status" id="">
+                                <option value="公开">公开</option>
+                                <option value="私密">私密</option>
+                            </select>
+                        </div>
+                                 </div>
+
+                    <div class="modal-footer">
+                        <input type="submit" value="创建" class="btn newBtn" />
+                    </div>
+                        
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+
+</html>
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/bs/js/bootstrap.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function () {
+        // 获取用户信息放到表单中
+        var user = JSON.parse(localStorage.getItem('user'));
+        var personalInfo = `<a href="" class="personal-logo"><img src="${httppic}${user.avatarSrc}" /></a>
+                    <div class="personal-info">
+                        <div class="title">
+                            <span class="info-name">${user.username}</span>
+                        </div>
+                        <ul class="slash-list">
+                            <li class="slash-item">四川-成都</li>
+                            <li class="slash-item"><a href="">关注4</a></li>
+                            <li class="slash-item"><a href="">粉丝11</a></li>
+                        </ul>
+                        <div class="personal-intro">
+                            <p>他注定是一个低调的大侠，所以他什么也没写</p>
+                        </div>
+                    </div>`;
+        $('#personalInfo').html(personalInfo);
+        var userlogined = `<input type="hidden" value="${user.uid}" name="user_id">`;
+        $('#user_id').html(userlogined);
+        var user = JSON.parse(localStorage.getItem('user'));
+        //获取自己的相册
+        $.ajax({
+            url: httpurl + 'myphoto/ajaxGetMyPhoto',
+            type: 'post',
+            data: {
+                'user_id': user.uid
+            },
+            success(res) {
+                console.log(res);
+                res.data.sort(compare("id")); 
+                var str = "";
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    str += `<div class="photo-box">
+                        <img onclick="member_uploadphoto(${v.id})"  class="pic" src="${httppic}${v.path}" alt="" srcset="">
+                        <div class="photoname">
+                        <span>${v.name}</span>
+                        <span onclick="datalethis(${v.id})" style="cursor: pointer;" >删除
+                        </span>
+                    </div>
+                </div>`;
+                });
+                str += `<div class="photo-box add-box" data-toggle="modal" data-target="#myModal">
+                <img src="__STATIC__/index/image/create.png" alt="" srcset="">
+           </div>`
+                $('#myalbum').html(str);
+            }
+        });
+        var albumid = JSON.parse(localStorage.getItem("albumid"));
+        var user = JSON.parse(localStorage.getItem('user'));
+        //获取自己的相册图片
+        $.ajax({
+            url: httpurl + 'myphoto/ajaxGetMyPhotoCont',
+            type: 'post',
+            data: {
+                'album_id': albumid
+            },
+            success(res) {
+                // console.log(res);
+                var str = "";
+                var data = res.data;
+                $.each(data, function (i, v) {
+                    str += `<div class="big-box">
+                        <div class="photo-box">
+                        <img class="pic" src="${httppic}${v.path}" alt="" srcset="">
+                        <div class="photoname">
+                        <span>${v.name}</span>
+                        </div>
+                        </div>
+                        </div> `;
+                });
+                $('#myphoto').html(str);
+            }
+        });
+    });
+    function compare(pro) { 
+    return function (obj1, obj2) { 
+        var val1 = obj1[pro]; 
+        var val2 = obj2[pro]; 
+        if (val1 < val2 ) { //正序
+            return 1; 
+        } else if (val1 > val2 ) { 
+            return -1; 
+        } else { 
+            return 0; 
+        } 
+    } 
+}
+
+    function member_uploadphoto(id) {
+        localStorage.albumid = JSON.stringify(id);
+        window.location.href = "{:url('index/member_uploadphoto')}";
+    }
+    function datalethis(id) {
+        //删除相册
+        var r = confirm("您确定要删除么？");
+        if (r == true) {
+            $.ajax({
+                url: httpurl + 'myphoto/dataleMyPhoto',
+                type: 'post',
+                data: {
+                    'id': id
+                },
+                success() {
+                    location.reload();
+                }
+            });
+        } else {
+            return false;
+        }
+    }
+</script>

@@ -1,0 +1,134 @@
+
+    <style>
+        .active {
+            border-bottom: 3px solid #ca9b04;
+        }
+        .list_container{
+            margin-top: 20px;
+        }
+
+        .list_box {
+            border-bottom: 1px solid #e1e1e1;
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            padding-bottom: 10px;
+        }
+        .list {
+            width: 100%;
+            margin-top: 20px;
+            /* background-color: rebeccapurple; */
+        }
+
+        .list1 {
+            width: 100%;
+            /* margin: 0 auto; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list_left {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: #ca9b04; */
+            align-items: center;
+
+        }
+
+        .news {
+            width: 100%;
+            margin-top: 10px;
+            display: block;
+
+        }
+
+        .mess {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            margin-left: 20px;
+
+        }
+
+        .riqi {
+            margin-right: 20px;
+        }
+
+        .tou {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .tan {
+            margin: 20px 70px;
+
+        }
+
+        .tan textarea {
+            padding: 10px 10px;
+        }
+
+        .huifu:hover {
+            color: #ca9b04;
+        }
+    </style>
+
+    <!--第二导航栏-->
+    <div class="secondaryNav">
+        <ul class="nav-list">
+            <li><a class="active" href="{:url('index/msg_comment')}">评论</a></li>
+            <li><a href="{:url('index/msg_like')}">收藏</a></li>
+        </ul>
+    </div>
+    <!-- 详细内容 -->
+    <div class="list_container" id="list_container">
+
+    </div>
+
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function(){
+        var user = JSON.parse(localStorage.getItem('user'));
+        //获取评论
+        $.ajax({
+            url: httpurl + 'comment/ajaxGetMsgComment',
+            type: 'post',
+            data: {
+                'user_id':user.uid
+            },
+            success(res) {
+                if(res.code == 200){
+                    console.log(res);
+                    var str = "";
+                    var data = res.data;
+                    $.each(data, function (i, v) {
+                         str += `<div class="list_box" >
+                                    <div class="list">
+                                        <div class="list1">
+                                            <div class="list_left">
+                                                <img class="tou" src="${httppic}${v.avatarSrc}" alt="" srcset="">
+                                                <span class="mess">
+                                                    <span style="color: #1936fa;">${v.username}</span>&nbsp&nbsp在你的作品&nbsp&nbsp<span style="color: #1936fa;">${v.title}</span>中评论:<span class="news">${v.content}</span>
+                                                </span>
+                                            </div>
+                                            <div class="listright">
+                                                <span class="riqi">${v.create_time}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                        $('#list_container').html(str);
+                    });
+                }else{
+                    alert(res.msg);
+                }
+            }
+        });
+    });
+</script>
+

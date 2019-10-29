@@ -1,0 +1,252 @@
+/* 引入使用的css样式 */
+@import url(./bootstrap.min.css);
+@import url(./font-awesome-4.7.0/css/font-awesome.min.css);
+@import url(./reset.css);
+@import url(./common.css);
+
+* {
+    margin:0px;
+    padding:0px;
+    border:none;
+    outline:none;
+  }
+  body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  min-width: 1200px;
+  background-color: #f9f9f9;
+}
+
+/* 头导航 */
+/* index-nav-wide */
+header{
+    font: white;
+}
+.nav-logo{
+	line-height: 60px;
+}
+.user-avatar{
+	border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+header img{
+    height: 40px;
+}
+header .container {
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1880px;
+    height: 60px;
+    padding: 0 40px;
+    margin: 0 auto;
+    background-color:black;
+}
+ .nav-wide li{
+	float: left;
+	line-height: 60px;
+	height: 40px;
+	text-align: center;
+}
+.nav-wide li a{
+	font-size: 15px;
+    color: #FFFFFF;
+}
+.nav-left li{
+	width: 80px;
+}
+.nav-left li a:hover{
+	color:#f3a28b;
+}
+.user-list >li{
+    min-width: 100px;
+}
+.user-publish>a{
+	padding: 5px 30px;
+	color: #ac7b1c;
+	border:1px solid #ac7b1c ;
+}
+.nav-right li a:hover{
+	color: #ac7b1c;
+}
+.subnav-list li{
+    position: relative;
+    float: none;
+	background-color: #242322;
+	min-width: 100px;
+}
+.subnav-list{
+	border-bottom: 2px solid #f3a28b;
+	padding-bottom: 10px;
+	background-color: #242322;
+    position: absolute;
+    top: 59px;
+    z-index: 1;
+    left: -20px;
+    line-height: 1;
+    opacity: 0;
+}
+/*main-banner*/
+.main-banner{
+    display: block;
+    position: relative;
+    height: 500px;
+    background-image:url(../img/5.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.container{
+    padding-top:40px;
+}
+.shequTitle{
+    font-size: 40px;
+}
+.search-input{
+    margin-top: 26px;
+    width: 700px;
+    height: 60px;
+    opacity: .92;
+    border: solid 1px #dedede;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.search-input input{
+    padding-left: 18px;
+    width: 644px;
+    height: 58px;
+    float: left;
+    outline: 0;
+    border: 0;
+    font-size: 18px;
+    text-align: left;
+}
+.search-input a{
+    margin: 20px 23px 0 0;
+    width: 21px;
+    height: 21px;
+    float: right;
+    background-size: 100% 100%;
+}
+
+.hotWord .word{
+    display: inline-block;
+    width: 65px;
+    height: 28px;
+    line-height: 26px;
+    text-align: center;
+    background-color: rgba(0,0,0,.3);
+    border: solid 1px rgba(151,151,151,.3);
+    border-right: 0;
+    color: #fff;
+}
+/*secendrayNav*/
+.secondaryNav{
+    width: 100%;
+    height: 60px;
+    padding: 16px 0;
+    background-color: #f2f3f4;
+    box-shadow:0px 4px 8px  rgba(133,136,138,.5);
+}
+.secondaryNav .nav-list{
+    position: relative;
+    text-align: center;
+    font-size: 0
+}
+.secondaryNav .nav-list li{
+    display: inline-block;
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.secondaryNav .nav-list li a {
+    position: relative;
+    display: block;
+    height: 100%;
+    margin: 0 20px;
+    color: #222;
+    text-decoration: none;
+}
+/*imageWall*/
+ .imageWall{
+    overflow: hidden;
+    width: 1220px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+ }
+.imageWall img{
+    float: left;
+    display: block;
+}
+
+/*user——index*/
+/*personnal_banner 用户首页封面*/
+
+.personal-integer{
+    display: block;
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+.personal-integer .container{
+    margin-left: 100px;
+    padding-top: 50px;
+}
+.personal-banner-info{
+
+    width: 100%;
+    padding: 180px 40px 40px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f9f9f9;
+    position: relative
+}
+.personal-banner-info .personal-logo{
+	display: inline-block;
+    margin-right:10px;
+    position: relative;
+}
+.personal-banner-info .personal-logo img{
+	width: 80px;
+    height: 80px;
+    border: solid 1px rgba(255,255,255,.1);
+    border-radius: 50px;
+    
+}
+.personal-info{
+	 width: 849px;
+    vertical-align: top;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.title .info-name{
+	     font-size: 22px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+}
+.slash-list{
+	margin: 12px 0 6px;
+    line-height: 20px;
+    height: 20px;
+}
+.slash-list .slash-item{
+	    font-weight: 500;
+	     display: inline-block;
+}
+.newBtn{
+    color: #fff;
+    background-color: #fcd15e;
+}
+.fontwihte{
+    color:#fff;
+}

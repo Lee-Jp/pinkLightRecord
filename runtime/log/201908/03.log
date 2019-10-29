@@ -1,0 +1,714 @@
+---------------------------------------------------------------
+[ 2019-08-03T17:33:04+08:00 ] 0.0.0.0 POST localhost/shequTp/public/admin/index/clearruntime.html
+[运行时间：0.148612s] [吞吐率：6.73req/s] [内存消耗：1,334.80kb] [文件加载：43]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'clearruntime',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/admin',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '6',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'user' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Index->clearRuntime[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:33:07+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/manager/managerlist.html
+[运行时间：0.074409s] [吞吐率：13.44req/s] [内存消耗：2,415.30kb] [文件加载：56]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'manager',
+    2 => 'managerlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Manager->managerlist[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Manager.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/admin\view\manager\managerlist.html [ array (
+  0 => 'data',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001103s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_manager` [ RunTime:0.010360s ]
+[ sql ] [ SQL ] SELECT * FROM `zc_manager` [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:33:11+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/user/userlist.html
+[运行时间：0.049319s] [吞吐率：20.28req/s] [内存消耗：2,209.99kb] [文件加载：55]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'userlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821663296; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\User->Userlist[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/admin\view\user\userlist.html [ array (
+  0 => 'data',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000950s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_user` [ RunTime:0.009931s ]
+[ sql ] [ SQL ] SELECT * FROM `zc_user` [ RunTime:0.000455s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:33:19+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/manager/managerlist.html
+[运行时间：0.057288s] [吞吐率：17.46req/s] [内存消耗：2,290.41kb] [文件加载：54]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'manager',
+    2 => 'managerlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Manager->managerlist[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Manager.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/admin\view\manager\managerlist.html [ array (
+  0 => 'data',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010166s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_manager` [ RunTime:0.009806s ]
+[ sql ] [ SQL ] SELECT * FROM `zc_manager` [ RunTime:0.000441s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:34:03+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin
+[运行时间：0.025099s] [吞吐率：39.84req/s] [内存消耗：1,387.44kb] [文件加载：45]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:34:03+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/login/log.html
+[运行时间：0.031391s] [吞吐率：31.86req/s] [内存消耗：1,550.70kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'log',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->log[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/admin\view\login\log.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:34:03+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/login/verify.html
+[运行时间：0.123450s] [吞吐率：8.10req/s] [内存消耗：1,376.20kb] [文件加载：43]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/admin/login/log.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:34:55+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/login/log.html
+[运行时间：0.048536s] [吞吐率：20.60req/s] [内存消耗：1,551.01kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'log',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->log[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/admin\view\login\log.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:34:55+08:00 ] 0.0.0.0 GET localhost/shequTp/public/admin/login/verify.html
+[运行时间：0.045597s] [吞吐率：21.93req/s] [内存消耗：1,376.41kb] [文件加载：43]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/admin/login/log.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->verify[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:35:04+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/comyulan.html
+[运行时间：0.051230s] [吞吐率：19.52req/s] [内存消耗：1,631.30kb] [文件加载：51]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'comyulan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->comyulan[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\comyulan.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:35:04+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comment/ajaxGetComment
+[运行时间：0.054666s] [吞吐率：18.29req/s] [内存消耗：1,932.19kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comment',
+    2 => 'ajaxGetComment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '11',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'photo_id' => '11',
+)
+[ info ] [ RUN ] app\api\controller\Comment->ajaxGetComment[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comment.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001145s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comment` [ RunTime:0.013048s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comment` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `photo_id` = 11 ORDER BY `id` DESC [ RunTime:0.000933s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:05+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/ajaxGetComphotoCont
+[运行时间：0.040881s] [吞吐率：24.46req/s] [内存消耗：1,950.40kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'ajaxGetComphotoCont',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '5',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->ajaxGetComphotoCont[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000876s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.010112s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comphoto` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `id` = 11 ORDER BY `id` DESC [ RunTime:0.000591s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:10+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/lickComPhoto
+[运行时间：0.066601s] [吞吐率：15.01req/s] [内存消耗：2,032.52kb] [文件加载：51]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'lickComPhoto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'photo_id' => '11',
+  'user_id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->lickComPhoto[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011531s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_collectioin` [ RunTime:0.009647s ]
+[ sql ] [ SQL ] SELECT * FROM `zc_collectioin` WHERE  `user_id` = 2  AND `photo_id` = 11 LIMIT 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] INSERT INTO `zc_collectioin` (`user_id` , `photo_id`) VALUES (2 , 11) [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.009648s ]
+[ sql ] [ SQL ] SELECT `score` FROM `zc_comphoto` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000396s ]
+[ sql ] [ SQL ] UPDATE `zc_comphoto`  SET `score`=2  WHERE  `id` = 11 [ RunTime:0.000454s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:11+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/followUser
+[运行时间：0.043476s] [吞吐率：23.00req/s] [内存消耗：1,942.59kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'followUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '21',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'friend_id' => '2',
+  'user_id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->followUser[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000939s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_focus` [ RunTime:0.009613s ]
+[ sql ] [ SQL ] SELECT * FROM `zc_focus` WHERE  `user_id` = 2  AND `friend_id` = 2 LIMIT 1 [ RunTime:0.000519s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:15+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/index.html
+[运行时间：0.040621s] [吞吐率：24.62req/s] [内存消耗：1,614.60kb] [文件加载：51]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:35:15+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/ajaxGetComphoto
+[运行时间：0.056460s] [吞吐率：17.71req/s] [内存消耗：1,953.11kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'ajaxGetComphoto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->ajaxGetComphoto[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001161s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.014273s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comphoto` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `check` = '审核通过' ORDER BY `id` DESC [ RunTime:0.001126s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:17+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/comyulan.html
+[运行时间：0.033934s] [吞吐率：29.47req/s] [内存消耗：1,482.66kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'comyulan',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->comyulan[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\comyulan.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:35:17+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comment/ajaxGetComment
+[运行时间：0.048911s] [吞吐率：20.45req/s] [内存消耗：1,932.94kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comment',
+    2 => 'ajaxGetComment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '10',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'photo_id' => '9',
+)
+[ info ] [ RUN ] app\api\controller\Comment->ajaxGetComment[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comment.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001036s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comment` [ RunTime:0.011436s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comment` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `photo_id` = 9 ORDER BY `id` DESC [ RunTime:0.000840s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:18+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/ajaxGetComphotoCont
+[运行时间：0.049179s] [吞吐率：20.33req/s] [内存消耗：1,950.39kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'ajaxGetComphotoCont',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '4',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '9',
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->ajaxGetComphotoCont[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009935s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.010279s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comphoto` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `id` = 9 ORDER BY `id` DESC [ RunTime:0.000655s ]
+---------------------------------------------------------------
+[ 2019-08-03T17:35:23+08:00 ] 0.0.0.0 GET localhost/shequTp/public/index/index/index.html
+[运行时间：0.038049s] [吞吐率：26.28req/s] [内存消耗：1,473.96kb] [文件加载：49]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/comyulan.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\index\controller\Index.php ]
+[ info ] [ VIEW ] F:\phpStudy\PHPTutorial\WWW\shequTp\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-03T17:35:23+08:00 ] 0.0.0.0 POST localhost/shequTp/public/api/comphoto/ajaxGetComphoto
+[运行时间：0.059130s] [吞吐率：16.91req/s] [内存消耗：1,953.11kb] [文件加载：48]
+[ info ] [ LANG ] F:\phpStudy\PHPTutorial\WWW\shequTp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'comphoto',
+    2 => 'ajaxGetComphoto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; ___rl__test__cookies=1564821743404; UM_distinctid=169241714df64d-037d478119b316-1333062-144000-169241714e07fc; pgv_pvi=1711332352; CNZZDATA1258442427=1146302667-1551088654-%7C1554336695; Phpstorm-cd979afe=78eacbe9-2af1-4dbb-bf3b-75e888ad763f; _ga=GA1.1.1879921386.1562120819; PHPSESSID=u9q09h357d1uachfhjahhiipe4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shequTp/public/index/index/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://localhost',
+  'accept' => '*/*',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\Comphoto->ajaxGetComphoto[ F:\phpStudy\PHPTutorial\WWW\shequTp\application\api\controller\Comphoto.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001282s ] mysql:host=127.0.0.1;port=3306;dbname=shequsql;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zc_comphoto` [ RunTime:0.012406s ]
+[ sql ] [ SQL ] SELECT `c`.*,`u`.`username`,`u`.`avatarSrc` FROM `zc_comphoto` `c` INNER JOIN `zc_user` `u` ON `c`.`user_id`=`u`.`uid` WHERE  `check` = '审核通过' ORDER BY `id` DESC [ RunTime:0.000876s ]

@@ -1,0 +1,87 @@
+        <style>
+            .active{
+                border-bottom:3px solid #ca9b04;
+            }
+            .list{
+                width: 100%;
+                margin-top: 20px;
+                /* background-color: rebeccapurple; */
+            }
+            .list1{
+                width: 50%;
+                margin:  0 auto;
+                padding: 20px;
+                border-bottom: 1px solid #e1e1e1;
+                display: flex;
+                justify-content: space-between;
+            }
+            .tou{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            .pic{
+                width: 50px;
+                height: 50px;
+            }
+            .mess{
+                margin-left: 10px;
+            }
+            .riqi{
+                margin-left: 40px;
+            }
+        </style>
+
+	<!--第二导航栏-->
+	<div class="secondaryNav">
+        <ul class="nav-list">
+            <li><a href="{:url('index/msg_comment')}">评论</a></li>
+            <li><a  class="active"  href="{:url('index/msg_like')}">收藏</a></li>
+        </ul>
+    </div>
+    <!-- 详细内容 -->
+    <div class="list" id="list_container">
+
+    </div>
+
+<script src="__STATIC__/index/js/jquery.min.js"></script>
+<script src="__STATIC__/index/js/myjs.js"></script>
+<script>
+    $(function(){
+        var user = JSON.parse(localStorage.getItem('user'));
+        //获取评论
+        $.ajax({
+            url: httpurl + 'comment/ajaxGetMsgLike',
+            type: 'post',
+            data: {
+                'user_id':user.uid
+            },
+            success(res) {
+                console.log(res);
+
+                if(res.code == 200){
+                    var str = "";
+                    var data = res.data;
+                    $.each(data, function (i, v) {
+                        str += `<div class="list1">
+                                <div class="list_left">
+                                    <img class="tou" src="${httppic}${v.avatarSrc}" alt="" srcset="">
+                                    <span class="mess">
+                                        <span style="color: #1936fa;">${v.username}</span>
+                                        喜欢了你的作品
+                                        <span style="color: #1936fa;">${v.title}</span>
+                                    </span>
+                                </div>
+                                <div class="listright">
+                                    <img class="pic" src="${httppic}${v.path}" alt="" srcset="">
+                                </div>
+                            </div>`;
+                        $('#list_container').html(str);
+                    });
+                }else{
+                    alert(res.msg);
+                }
+            }
+        });
+    });
+</script>
